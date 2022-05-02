@@ -1,0 +1,12 @@
+#intro{
+    display: block;
+    align-content: center;
+    margin-top: 2px;
+    margin: auto;
+    text-align: center;
+}
+#intro > *{
+    text-align: center;
+    justify-items: center;
+    justify-content: center;
+}

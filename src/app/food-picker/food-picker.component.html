@@ -1,0 +1,22 @@
+<div id="selected">
+    <h3>You should eat: {{selected}}</h3>
+    <button mat-raised-button color="primary" (click)="selectItem()">Start</button>
+</div>
+<mat-expansion-panel>
+    <mat-expansion-panel-header>
+        Current items
+    </mat-expansion-panel-header>
+    <mat-list >
+        <mat-list-item *ngFor="let item of items">{{item}}</mat-list-item>
+    </mat-list>
+</mat-expansion-panel>
+<mat-expansion-panel>
+    <mat-expansion-panel-header>
+        Add a dish/restaurant
+    </mat-expansion-panel-header>
+    <mat-form-field appearance="fill">
+        <mat-label>Name</mat-label>
+        <input matInput type="text" [(ngModel)]="foodItem">
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="addItem()">Add</button>
+</mat-expansion-panel>
