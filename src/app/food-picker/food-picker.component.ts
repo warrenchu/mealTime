@@ -28,4 +28,7 @@ export class FoodPickerComponent implements OnInit {
       this.selected = this.items[index];
     }
   }
+  clear(){
+    this.items = [];
+  }
 }

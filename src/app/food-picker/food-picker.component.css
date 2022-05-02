@@ -1,4 +1,15 @@
 #selected{
     text-align: center;
     margin: auto;
+
+}
+#selected > button {
+    margin: 5px;
+}
+#intro {
+    text-align: center;
+    margin: auto;
+}
+#addItem > button {
+    margin: 5px;
 }

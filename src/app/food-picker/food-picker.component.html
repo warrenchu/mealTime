@@ -1,6 +1,11 @@
+<div id="intro">
+    <h1>Food Picker</h1>
+    <h4>It's guaranteed to be a random choice!</h4>
+</div>
 <div id="selected">
-    <h3>You should eat: {{selected}}</h3>
+    <h2>You should choose: {{selected}}</h2>
     <button mat-raised-button color="primary" (click)="selectItem()">Start</button>
+    <button mat-raised-button color="warn" (click)="clear()">Clear items</button>
 </div>
 <mat-expansion-panel>
     <mat-expansion-panel-header>
@@ -10,7 +15,7 @@
         <mat-list-item *ngFor="let item of items">{{item}}</mat-list-item>
     </mat-list>
 </mat-expansion-panel>
-<mat-expansion-panel>
+<mat-expansion-panel id="addItem">
     <mat-expansion-panel-header>
         Add a dish/restaurant
     </mat-expansion-panel-header>
