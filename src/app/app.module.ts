@@ -15,13 +15,16 @@ import { FoodPickerComponent } from './food-picker/food-picker.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
+import { FooterComponent } from './footer/footer.component';
+import {MatDividerModule} from '@angular/material/divider';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     HeaderComponent,
-    FoodPickerComponent
+    FoodPickerComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +37,8 @@ import {MatInputModule} from '@angular/material/input';
     MatExpansionModule,
     MatFormFieldModule,
     FormsModule,
-    MatInputModule
+    MatInputModule,
+    MatDividerModule
 
   ],
   providers: [],
