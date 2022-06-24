@@ -17,7 +17,7 @@ import { FormsModule } from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
 import { FooterComponent } from './footer/footer.component';
 import {MatDividerModule} from '@angular/material/divider';
-
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,6 +30,7 @@ import {MatDividerModule} from '@angular/material/divider';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
