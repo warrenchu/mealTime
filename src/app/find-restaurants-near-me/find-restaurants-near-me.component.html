@@ -1,7 +1,7 @@
 <div id="intro">
     <h1>Restaurants near me</h1>
-    <h4>Here, you can specify any preferences, then see restaurants.</h4>
-    <h5>This web app makes use of the Yelp Fusion API to find restaurants for you.</h5>
+    <h4>Tell us your location, and any preferences and we'll find you something to eat!</h4>
+    <h5>Functionaltity is provided by the Yelp Fusion API. The accuracy of results is not guaranteed.</h5>
 </div>
 <div id="params">
     <form class="example-form" id="form">
@@ -34,12 +34,15 @@
     </form>
 </div>
 <div id="restaurants_found">
-    <mat-grid-list cols="2" rowHeight="2:1">
+    <mat-grid-list cols="1" rowHeight="300px">
         <mat-grid-tile *ngFor="let rest of result">
             <mat-card>
                 <mat-card-title>{{rest.name}}</mat-card-title>
                 <mat-card-content>
-                    <h3>Address: {{rest.location.address1}} {{rest?.location?.address2}} {{rest.location?.address3}}, {{rest.location?.city}}, {{rest.location?.state}}, {{rest.location?.zipcode}}</h3>
+                    <img src={{rest.image_url}} height="100px" width="150px">
+                    <h3>Address: {{rest.location.address1}} {{rest?.location?.address2}} {{rest.location?.address3}}, {{rest.location?.city}}, {{rest.location?.state}}</h3>
+                    <h3>Rating: {{rest.rating}}</h3>
+                    <h3>Phone: {{rest.display_phone}}</h3>
                 </mat-card-content>
             </mat-card>
         </mat-grid-tile>

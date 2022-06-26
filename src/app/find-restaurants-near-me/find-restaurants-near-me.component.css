@@ -24,7 +24,9 @@
 #restaurants_found{
     margin: auto;
 }
-.mat-card {
-    margin: 10px;
-
+.mat-card{
+    margin: 5px;
+}
+.mat-card-content > img {
+    margin: auto;
 }
