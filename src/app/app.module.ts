@@ -18,18 +18,27 @@ import {MatInputModule} from '@angular/material/input';
 import { FooterComponent } from './footer/footer.component';
 import {MatDividerModule} from '@angular/material/divider';
 import { HttpClientModule } from '@angular/common/http';
+import { FindRestaurantsNearMeComponent } from './find-restaurants-near-me/find-restaurants-near-me.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatCardModule} from '@angular/material/card';
+import {MatGridListModule} from '@angular/material/grid-list';
+
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     HeaderComponent,
     FoodPickerComponent,
-    FooterComponent
+    FooterComponent,
+    FindRestaurantsNearMeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    MatCardModule,
     HttpClientModule,
     MatToolbarModule,
     MatIconModule,
@@ -38,8 +47,11 @@ import { HttpClientModule } from '@angular/common/http';
     MatExpansionModule,
     MatFormFieldModule,
     FormsModule,
-    MatInputModule,
-    MatDividerModule
+    MatInputModule,MatGridListModule,
+    MatDividerModule,
+    MatRadioModule,
+    MatSnackBarModule,
+    ReactiveFormsModule
 
   ],
   providers: [],

@@ -1,0 +1,47 @@
+<div id="intro">
+    <h1>Restaurants near me</h1>
+    <h4>Here, you can specify any preferences, then see restaurants.</h4>
+    <h5>This web app makes use of the Yelp Fusion API to find restaurants for you.</h5>
+</div>
+<div id="params">
+    <form class="example-form" id="form">
+        <mat-form-field appearance="fill">
+            <mat-label>Your location</mat-label>
+            <input matInput type="text" [(ngModel)]="location" name="location" required placeholder="Toronto, ON">
+        </mat-form-field>
+        <mat-form-field class="example-form-field" appearance="fill">
+            <mat-label>Cuisine</mat-label>
+            <input matInput type="text" [(ngModel)]="cuisine" name="cuisine">
+            <button *ngIf="cuisine" matSuffix mat-icon-button aria-label="Clear" (click)="cuisine=''">
+                <mat-icon>close</mat-icon>
+            </button>
+        </mat-form-field>
+        <mat-radio-group aria-label="Select an option" [(ngModel)]="priceRange" id="pricerange" name="pricerange">
+            <mat-label>Price Range</mat-label>
+            <mat-radio-button value="1">$</mat-radio-button>
+            <mat-radio-button value="2">$$</mat-radio-button>
+            <mat-radio-button value="3">$$$</mat-radio-button>
+            <mat-radio-button value="4">$$$$</mat-radio-button>
+
+        </mat-radio-group>
+        <mat-form-field class="example-form-field" appearance="fill">
+            <mat-label>Number of restaurants you want to see</mat-label>
+            <input matInput type="number" [(ngModel)]="limit" name="limit">
+        </mat-form-field>
+
+        <button mat-button color="primary" (click)="findRestaurants()">Search</button>
+
+    </form>
+</div>
+<div id="restaurants_found">
+    <mat-grid-list cols="2" rowHeight="2:1">
+        <mat-grid-tile *ngFor="let rest of result">
+            <mat-card>
+                <mat-card-title>{{rest.name}}</mat-card-title>
+                <mat-card-content>
+                    <h3>Address: {{rest.location.address1}} {{rest?.location?.address2}} {{rest.location?.address3}}, {{rest.location?.city}}, {{rest.location?.state}}, {{rest.location?.zipcode}}</h3>
+                </mat-card-content>
+            </mat-card>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>

@@ -13,4 +13,7 @@ export class RouterService {
   routeToHome(){
     this.router.navigate(['/'])
   }
+  routeToYelpFinder(){
+    this.router.navigate(['/yelpFinder'])
+  }
 }
