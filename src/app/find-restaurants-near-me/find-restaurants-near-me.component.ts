@@ -13,8 +13,9 @@ export class FindRestaurantsNearMeComponent implements OnInit {
   priceRange: number = 1;
   limit: number = 5;
   result: any[] = [];
-  constructor(private _snackBar: MatSnackBar, private service:YelpServiceService) { }
+  radius: number = 5;
 
+  constructor(private _snackBar: MatSnackBar, private service:YelpServiceService) { }
   ngOnInit(): void {
   }
   findRestaurants(){
@@ -24,7 +25,7 @@ export class FindRestaurantsNearMeComponent implements OnInit {
       })
     }
     else{
-      this.service.getRestaurants(this.location, this.priceRange, this.cuisine, this.limit).subscribe (data => {
+      this.service.getRestaurants(this.location, this.priceRange, this.cuisine, this.limit, Math.floor(this.radius) * 1000).subscribe (data => {
         console.log(data);
         this.result = data.businesses;
       })

@@ -9,8 +9,11 @@ export class YelpServiceService {
 
   constructor(public client: HttpClient) { }
   url: string = "http://localhost:9000/restaurants"
-  getRestaurants(cityName: string, price: number, cuisine: string, limit: number): Observable<any>{
-    var params = new HttpParams().append("cityName", cityName).append("price", price).append("cuisine", cuisine).append("limit", limit);
+  getRestaurants(cityName: string, price: number, cuisine: string, limit: number, radius: number): Observable<any>{
+    var params = new HttpParams()
+                    .append("cityName", cityName)
+                    .append("price", price).append("cuisine", cuisine)
+                    .append("limit", limit).append("radius", radius);
   
     return this.client.get(this.url, {params: params});
 

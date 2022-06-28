@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 @Component({
   selector: 'app-food-picker',
   templateUrl: './food-picker.component.html',
@@ -8,7 +9,7 @@ export class FoodPickerComponent implements OnInit {
   selected: string = '';
   items: string[] = [];
   foodItem: string = '';
-  constructor() { }
+  constructor(private _snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
   }
@@ -20,8 +21,11 @@ export class FoodPickerComponent implements OnInit {
   }
   selectItem() {
     if (this.items.length == 0) {
-      this.selected = "Add some items first";
-    }
+     // this.selected = "Add some items first";
+     this._snackBar.open("Add some items first", "OK", {
+      duration: 5000
+    })
+  }
     else {
       var index = Math.floor(Math.random() * (this.items.length))
       console.log(index);
