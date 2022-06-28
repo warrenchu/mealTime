@@ -15,5 +15,8 @@ export class HomeComponent implements OnInit {
   navigateToPicker(){
     this.routerService.routeToFoodPicker();
   }
+  navigateToYelpFinder(){
+    this.routerService.routeToYelpFinder();
+  }
 
 }

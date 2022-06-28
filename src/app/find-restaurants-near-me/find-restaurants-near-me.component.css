@@ -1,0 +1,32 @@
+#intro {
+    text-align: center;
+    margin: auto;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 20px auto;
+
+}
+
+
+#pricerange {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+    align-items: flex-start;
+  }
+.example-radio-button {
+    margin: 5px;
+}
+#restaurants_found{
+    margin: auto;
+}
+.mat-card{
+    margin: 5px;
+}
+.mat-card-content > img {
+    margin: auto;
+}
