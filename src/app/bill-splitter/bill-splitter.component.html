@@ -1,1 +1,18 @@
-<p>bill-splitter works!</p>
+<div id="intro">
+    <h1>Split a bill</h1>
+    <h3>Enter your restaurant bill amount (before taxes), and how many people there are. </h3>
+    <h3 *ngIf="payment_per_person >0">Each person should pay: ${{payment_per_person|number: '1.2-2'}} </h3>
+</div>
+<div id="components">
+    <mat-form-field class="example-full-width">
+      <mat-label>Total bill (including GST/PST/HST/sales tax) </mat-label>
+      <input matInput number [(ngModel)]="restaurant_amount" name="restaurant_amount">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>How many people are you splitting the bill with?</mat-label>
+        <input matInput number [(ngModel)]="num_ppl" name="tip_percent" min="1">
+
+    </mat-form-field>
+    <button mat-button color="primary" (click)="calculateSplit()">Calculate tip!</button>
+  
+</div>

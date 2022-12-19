@@ -21,4 +21,7 @@ export class HomeComponent implements OnInit {
   navigateToTipCalc(){
     this.routerService.routeToTipCalc();
   }
+  navigateToSplitBill(){
+    this.routerService.routeToSplitBill();
+  }
 }

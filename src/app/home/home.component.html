@@ -2,7 +2,8 @@
 <div id="intro">
     <h1>Welcome to MealTime!</h1>
     <h2>Your ultimate dining assistant- it helps you find something to eat, and also helps you when you're dining out!</h2>
-    <h3>This is a web-app, created in Angular, using Material Design components.</h3>
+    <h2>You can split a bill and even calculate tips. </h2>
+    <h3>This is a web app, created in Angular, using Material Design components. The Restaurant Finder uses the Yelp Fusion API, which is called via a Spring Boot API. </h3>
     
     
     <button mat-flat-button color="primary" (click)="navigateToPicker()">Help me randomly select menu items</button>
@@ -11,4 +12,7 @@
     <button mat-flat-button color="primary" (click)="navigateToYelpFinder()">Find me a restaurant</button>
     <br />
     <button mat-flat-button color="primary" (click)="navigateToTipCalc()">Tip calculator</button>
+    <br />
+    <button mat-flat-button color="primary" (click)="navigateToSplitBill()">Bill Splitter</button>
+
 </div>

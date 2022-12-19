@@ -19,4 +19,7 @@ export class RouterService {
   routeToTipCalc(){
     this.router.navigate(['/tipcalc'])
   }
+  routeToSplitBill(){
+    this.router.navigate(['/billsplit'])
+  }
 }

@@ -4,6 +4,7 @@ import { FindRestaurantsNearMeComponent } from './find-restaurants-near-me/find-
 import { FoodPickerComponent } from './food-picker/food-picker.component';
 import { HomeComponent } from './home/home.component';
 import { TipCalculatorComponent } from './tip-calculator/tip-calculator.component';
+import { BillSplitterComponent } from './bill-splitter/bill-splitter.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},{
@@ -11,7 +12,8 @@ const routes: Routes = [
   },
   {path: 'picker', component: FoodPickerComponent},
   {path:'yelpFinder', component: FindRestaurantsNearMeComponent},
-  {path: 'tipcalc', component:TipCalculatorComponent}
+  {path: 'tipcalc', component:TipCalculatorComponent},
+  {path:'billsplit', component: BillSplitterComponent}
 ];
 
 @NgModule({
