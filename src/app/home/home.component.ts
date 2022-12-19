@@ -18,5 +18,7 @@ export class HomeComponent implements OnInit {
   navigateToYelpFinder(){
     this.routerService.routeToYelpFinder();
   }
-
+  navigateToTipCalc(){
+    this.routerService.routeToTipCalc();
+  }
 }

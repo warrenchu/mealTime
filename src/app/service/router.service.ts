@@ -16,4 +16,7 @@ export class RouterService {
   routeToYelpFinder(){
     this.router.navigate(['/yelpFinder'])
   }
+  routeToTipCalc(){
+    this.router.navigate(['/tipcalc'])
+  }
 }

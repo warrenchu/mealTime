@@ -1,0 +1,20 @@
+<div id="intro">
+    <h1>Tip calculator</h1>
+    <h3>Enter your restaurant bill amount (before taxes), and how much you wish to tip. </h3>
+    <h3 *ngIf="tip_amt >0">Your tip is: ${{tip_amt|number: '1.2-2'}} </h3>
+    <h4>There's no need to tip when you're buying takeout or fast food. Just skip the step or enter 0 when paying by credit card. </h4>
+</div>
+
+<div id="components">
+        <mat-form-field class="example-full-width">
+          <mat-label>Total bill (before GST/PST/HST)</mat-label>
+          <input matInput number [(ngModel)]="restaurant_amount" name="restaurant_amount">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Tip percentage (%)</mat-label>
+            <input matInput number [(ngModel)]="tip_percent" name="tip_percent" max="30">
+  
+        </mat-form-field>
+        <button mat-button color="primary" (click)="calculateTip()">Calculate tip!</button>
+      
+</div>

@@ -24,6 +24,8 @@ import {MatRadioModule} from '@angular/material/radio';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatCardModule} from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
+import { TipCalculatorComponent } from './tip-calculator/tip-calculator.component';
+import { BillSplitterComponent } from './bill-splitter/bill-splitter.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import {MatGridListModule} from '@angular/material/grid-list';
     HeaderComponent,
     FoodPickerComponent,
     FooterComponent,
-    FindRestaurantsNearMeComponent
+    FindRestaurantsNearMeComponent,
+    TipCalculatorComponent,
+    BillSplitterComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,11 @@
+#intro {
+    text-align: center;
+    margin: auto;
+}
+#components {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 20px auto;
+
+}
