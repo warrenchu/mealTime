@@ -5,3 +5,6 @@ Welcome to MealTime! This is a web app built in Angular, with Material Design co
 # Technologies used
 * Angular
 * Spring Boot (in a separate private repository)- this is the back-end of the project. It connects to an API to fetch restaurant recommendations.  
+
+# Copyright
+Copyright 2022-2023 by Warren Chu. All Rights Reserved.
